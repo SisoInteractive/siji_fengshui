@@ -478,7 +478,7 @@ input {
     -webkit-transform: translate3d(0px, 0, 0);
   }
   50% {
-    -webkit-transform: translate3d(10px, 2px, 0);
+    -webkit-transform: translate3d(10px, 1px, 0);
   }
 }
 @keyframes piao {
@@ -487,7 +487,7 @@ input {
     -webkit-transform: translate3d(0px, 0, 0);
   }
   50% {
-    -webkit-transform: translate3d(10px, 2px, 0);
+    -webkit-transform: translate3d(10px, 1px, 0);
   }
 }
 @-webkit-keyframes piao2 {

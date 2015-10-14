@@ -36,7 +36,7 @@ var app = {
         //  first time play BGM
         var initSound = function () {
             //  delay play
-            $('#audio')[0].play();
+            $('#music')[0].play();
             document.removeEventListener('touchstart', initSound, false);
         };
         document.addEventListener('touchstart', initSound, false);

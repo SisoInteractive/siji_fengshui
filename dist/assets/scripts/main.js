@@ -14,6 +14,7 @@ var app = {
             noSwiping: false,
             // init
             onInit: function () {
+                $('.swiper-slide').css('opacity','1');
             },
             onTransitionStart: function (swiper) {
             },
@@ -41,8 +42,8 @@ var app = {
             console.log(ViewWidth)
             var ViewScale = ViewWidth / 320;
             var style = '-webkit-transform:scale3d(' + ViewScale + ',' + ViewScale + ',' + ViewScale + '); -webkit-transform-origin : 0% 0%;'+'transform:scale3d(' + ViewScale + ',' + ViewScale + ',' + ViewScale + '); transform-origin : 0% 0%;';
+            //var dom = document.getElementById('view-box')
             document.body.setAttribute('style',style);
-
         }
         ViewScale();
 

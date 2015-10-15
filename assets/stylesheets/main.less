@@ -6,22 +6,25 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-transform: translateZ(0) scale(1, 1);
   -webkit-tap-highlight-color: transparent; /* For some Androids */
   outline: none;
 }
 
 html {
+  max-width: 540px;
+  min-width: 320px;
+  display: block;
+  margin: 0 auto;
   height: 100%;
   font-family: "microsoft yahei", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 body {
   height: 100%;
-  overflow: hidden;
   margin: 0  auto;
   background: #90d2e0;
-  
+  max-width: 540px;
+  min-width: 320px;
 }
 
 a {
@@ -64,7 +67,6 @@ input {
 }
 .swiper-slide{
   overflow: hidden;
-  -webkit-perspective: 3000;
   -webkit-backface-visibility: hidden;
 }
 
@@ -81,32 +83,53 @@ input {
     width: 151px;
     height: 151px;
     display: block;
-    border-radius: 100%;
+    position: relative;
+    z-index: 99;
+    border-top-left-radius: 999px; /* 左上角 */
+    border-top-right-radius: 999px; /* 右上角 */
+    border-bottom-right-radius: 999px; /* 右下角 */
+    border-bottom-left-radius: 999px; /* 左下角 */
+    border-radius: 999px;
     border: 3px solid #5e483a;
+    overflow: hidden;
     left: 84px;
+    background-clip: padding-box;
     top: 61px;
     .box-2{
       border: 2px solid #5e483a;
       width: 143px;
       height: 143px;
+      z-index: 999;
       display: block;
-      border-radius: 100%;
+      border-top-left-radius: 999px; /* 左上角 */
+      border-top-right-radius: 999px; /* 右上角 */
+      border-bottom-right-radius: 999px; /* 右下角 */
+      border-bottom-left-radius: 999px; /* 左下角 */
+      border-radius: 999px;
       left: 2px;
       top: 2px;
       overflow: hidden;
       position: absolute;
+      background-clip: padding-box;
       img{
         opacity: 1 !important;
+        position: absolute;
+        border-radius: 9999px;
+        z-index: 77;
       }
-      .hld{
-        -webkit-animation: piao 7.5s infinite;
+      .hl-box{
+        width: 150px;
+        overflow: hidden;
       }
-      .hls{
-        -webkit-animation: piao2 6s infinite;
-      }
-      .ho{
-        -webkit-animation: ho 11s infinite;
-      }
+//      .hld{
+//        -webkit-animation: piao 7.5s infinite;
+//      }
+//      .hls{
+//        -webkit-animation: piao2 6s infinite;
+//      }
+//      .ho{
+//        -webkit-animation: ho 11s infinite;
+//      }
 
     }
   }

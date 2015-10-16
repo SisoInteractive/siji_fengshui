@@ -49,6 +49,20 @@ input {
 .pr{
   position: relative;
 }
+#iSlider-arrow {
+  position: absolute;
+  width: 1.1em;
+  height: 1.1em;
+  left: 0;
+  right: 0;
+  bottom: 8%;
+  margin: 0 auto;
+  border-top: 2px solid #5A1E1E;
+  border-right: 2px solid #5A1E1E;
+  z-index: 10000;
+  opacity: 1;
+  -webkit-animation: nextPage 1.2s linear infinite;
+}
 #view-box{
   position: relative;
   width: 100%;
@@ -397,6 +411,20 @@ input {
   }
 }
 
+@-webkit-keyframes nextPage {
+  0% {
+    -webkit-transform: translateY(40px) rotate(-45deg);
+    opacity: 0.8;
+  }
+  50% {
+    -webkit-transform: translateY(20px) rotate(-45deg);
+    opacity: 0.4;
+  }
+  100% {
+    -webkit-transform: translateY(10px) rotate(-45deg);
+    opacity: 0;
+  }
+}
 /*======================================================================
       Responsive
   ======================================================================*/

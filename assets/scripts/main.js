@@ -14,7 +14,7 @@ var app = {
             noSwiping: false,
             // init
             onInit: function () {
-                $('.swiper-slide').css('opacity','1');
+                $('.swiper-container').css('opacity','1');
             },
             onTransitionStart: function (swiper) {
             },
@@ -30,6 +30,11 @@ var app = {
                     case 3:
                         $('.scene04').addClass('active');
                         break;
+                }
+                if( swiper.activeIndex == $('.swiper-slide').length -1 ){
+                    $('#iSlider-arrow').hide();
+                }else{
+                    $('#iSlider-arrow').show();
                 }
             }
         });
